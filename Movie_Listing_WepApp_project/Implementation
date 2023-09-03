@@ -1,0 +1,100 @@
+IMPLEMENTATION :
+    Step 1 : Cloning the Github repository for the Web Application that we have Initially, 
+             We cloned the “Movie listing” website which uses ReactJS as frontend, NodeJS as backend and MongoDB as database from the git repository
+             https://github.com/snehal-heíoviíed/DEVOPS_CAPSľONE\
+             
+    step 2 : setup the database in MongodB.
+             We created a MongoDB cluster in free tier 
+             After creation of the cluster we click on connect .
+
+             To connect the database with server copy the link shown below.
+             Give the MongoDB cluster link that we have got from the newly Created Cluster in the code that we have got from the     repository.
+
+    Step 3 : Creation of s3 bucket in aws console:
+    
+    Step 4 : creating the instances for frontend and backend
+             Creating the amazon instances with Amazon Linux and t2.micro  Configuration
+             After the Instances get into running state , connect  to the instances    
+             
+    Step 5 : installing dependencies on both client and server instances
+             The required dependencies are Nodejs ,Git and Docker .
+             We use the following commands to install these:
+             “yum install Docker”
+             “yum install git” “yum install nodejs”
+             
+    Step 6 : Deploying server on EC2
+            Clone the Server code into the server Ec2 
+            open the Server folder 
+            -	open the App.js and change the MongoDB link with your cluster Link
+            -	open the .env file and change the S3 bucket Name and AWS credentials .
+            
+            And the Docker file of the code is given below
+            
+                # Use the official Node.js image as the base image
+                FROM node:14
+
+                # Set the working directory to /app
+                WORKDIR /app
+
+                # Copy package.json and package-lock.json to the working directory
+                COPY package*.json ./
+
+                # Install dependencies
+                RUN npm install
+
+                # Copy the rest of the application code to the working directory
+                COPY . .
+
+                # Set the environment variables for MongoDB connection
+                ENV MONGODB_URI=<your-atlas-uri>
+
+                # Expose port 3000 for the application to listen on
+                EXPOSE 3000
+
+                # Start the application
+                CMD ["npm", "start"]
+            
+            Creating Docker image for the server by using Dockerfile and the command
+            “docker build -t server .” and run the image using command “docker run -d -p 5000:5000 server”
+            
+    Step 7 : Creating the elastic IP and assigning to the server
+             While stopping and starting of the instance the publicv4 IP is changes inorder make the ip static the elastic IP is assigned to the instances
+
+             Pushing the docker image to the Docker hub
+             Using  the command “docker push reponame/imagename”
+
+
+    Step 8 : Deploying client on EC2
+             Changing the client code by changing the host url as the elastic Ip i.e, http:// 34.194.155.38:5000
+             Creating the client docker image and run the image with the port number 3000 .and the Docker file is shown below
+ 
+    Step 9 : creating load balancer
+            •	Choosing the right type of load balancer (application, network, or classic).
+
+            •	Configuring health checks for target instances.
+
+            •	Creating target groups and adding instances to them.
+
+            •	Setting up listeners and routing rules for incoming traffic.
+
+            Creating the Target Groups for the load balancer
+
+            These ARE TARGET GROUPS: 
+            DNS MAPPING
+
+            •	Choosing a domain name registrar.
+
+            •	Creating a hosted zone in Amazon Route 53.
+
+            •	Configuring DNS records (A, CNAME, etc.).
+
+            •	Pointing the domain name to the IP address of the load balancer or EC2 instance.
+
+            •	Testing and verifying the DNS resolution.
+
+•	The deployed web application. Enter the details in the displayed web page and submit the details. 
+  The details are uploaded into the mongoDB server and photos are uploaded to the attached S3 bucket.
+
+•	The photos that we having uploaded through the web application will be displayed in S3.
+  And the  movie details will be sent into the MongoDB .
+  while reviewing the movies it will take data from the s3 and MongoDB inorder to display the movie details.

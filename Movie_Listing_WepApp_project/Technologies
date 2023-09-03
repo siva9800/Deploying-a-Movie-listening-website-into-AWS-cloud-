@@ -1,0 +1,52 @@
+_- TECHNICAL STACK -_
+
+        •	Frontend: Reactjs
+
+        •	Backend: NodeJS
+
+        •	Database: MongoDB
+
+        •	Cloud Infrastructure: Aws
+
+        •	Containerization: Docker
+
+        •	Load Balancing: Aws Elastic Load Balancer
+
+        •	DNS: Amazon Route 53
+
+_- RESOURCES -_
+
+        MongoDB :	https://www.mongodb.com/docs/
+        AWS	:	https://docs.aws.amazon.com/
+        S3-multer :	https://www.npmjs.com/package/multer-s3
+        Docker	:	https://docs.docker.com/
+        Git	:	https://git-scm.com/docs
+        AWS Architecture Diagram Developing tools: https://aws.amazon.com/architecture/icons/
+        
+        
+_- TECHNOLOGIES USED IN THIS PROJECT -_ 
+
+        AWS:  AWS is designed to allow application providers, ISVs, and vendors to quickly and securely host your applications 
+              whether an existing application or a new SaaS-based application. 
+              You can use the AWS Management Console or well-documented web services APIs to access AWS's application hosting platform.
+              We use EC2 ,S3 , LOADBALANCER, ELASTIC IPs ,Route 53 and ECS in this project
+
+
+
+        Docker: Docker is an open-source platform that allows developers to create, deploy, and run applications in containers. 
+                Containers are self-contained, portable units of software that include all the dependencies needed to run an application .
+                here we used docker for creating containers for frontend and backend .
+
+
+
+        GIT: Git is a version control system that allows developers to track changes to their code and collaborate with others on a project. 
+             It is a free and open-source tool that provides features such as branching, merging, and version history. 
+             Git's distributed architecture enables developers to work independently and collaborate with others, 
+             making it a powerful tool for managing software development projects.
+             Here we used git Accessing the github repository  from where we got our web application code.
+
+
+
+        MongoDB : is a popular open-source NoSQL document-oriented database management system. 
+                  It is designed to store and manage large volumes of unstructured data in a flexible and scalable way.
+                  Here we use Mongo Db Cluster to store the movies data that has been entered by the users.

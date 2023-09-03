@@ -1,0 +1,27 @@
+*DEPLOYING A MOVIE LISTING WEBSITE IN AWS CLOUD INFRASTRUCTURE WITH PROPER SCALING*
+
+    < The Movie Listing website is a  web application built using ReactJS, NodeJS, and MongoDB. 
+      It is a platform where users can upload movie details and images, and other users can view  the movies data uploaded into the website. 
+
+    < The Movie Listing website uses React IS as the frontend technology. 
+      ReactJS is a popular JavaScript library that is used for building user interfaces, 
+      it allows developers to create reusable UI components  that can be used across the application. 
+
+    < The frontend of the Movie Listing website is built using ReactJS and is responsible for displaying the user interface to the end-users.
+      The backend of the Movie Listing website is deployed on an EC2 instance in the proposed deployment architecture, 
+      EC2 is a virtual machine in the cloud offered by AWS. 
+    < It allows developers to run applications on a scalable and secure cloud infrastructure. 
+      Docker is used for deployment, which is a containerization platform that allows developers to package applications into containers
+
+      In this project we are deploying  website in the cloud infrastructure using Amazon Web Services (AWS)  and providing the load balancing .
+      This document outlines the technical steps included in the project, including the technology stack, installation guide, and deployment instructions.
+
+-_ PROJECT OVERVIEW _- :
+
+    < The scope of the project is to deploy a website using Amazon Elastic Compute Cloud (EC2) and Docker container technology. 
+      The project includes developing a web application and modify it according to our requirements. 
+      Configuring and setting up an EC2 instance also plays a vital role in this project. Mongo dB is used instead of the local database.
+
+    < The web application is containerized using docker for easier maintenance and deployment.
+    < It involves the deployment of web application from our EC2 instance and also attaching a load balancer to reduce the web traffic load on an instance. 
+      The project can be concluded by assigning a DNS for accessing the website.
